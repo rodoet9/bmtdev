@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
 	providedIn: 'root',
 })
 export class StrapiService {
-	private apiUrl = 'http://localhost:1337'; // Replace with your Strapi URL
+	private apiUrl = 'https://automatic-vitality-63db4a3832.strapiapp.com/api'; // Replace with your Strapi URL
 
 	constructor(private http: HttpClient) {}
 
 	getProjects(): Observable<any> {
-		return this.http.get(`${this.apiUrl}/projects`);
+		return this.http.get(`${this.apiUrl}/categories`);
 	}
 
 	getAbout(): Observable<any> {

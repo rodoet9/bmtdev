@@ -16,7 +16,8 @@ export class ProjectsComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.strapiService.getProjects().subscribe(data => {
-			this.projects = data;
+			this.projects = data.data;
+			console.log(this.projects);
 		});
 	}
 }
