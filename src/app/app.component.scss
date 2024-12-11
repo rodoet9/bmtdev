@@ -1,0 +1,23 @@
+.container {
+	padding: 0 100px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(135deg, #1e5a46, #74a96b, #c1d1b2);
+	background-size: 200% 200%;
+	animation: gradientShift 6s ease infinite;
+	min-height: 100%;
+}
+
+@keyframes gradientShift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

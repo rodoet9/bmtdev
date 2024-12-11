@@ -5,9 +5,9 @@ import { ServicesComponent } from '../services/services.component';
 import { ContactComponent } from '../contact/contact.component';
 
 export const routes: Routes = [
-	// { path: '', component: HomeComponent },
+	{ path: '', component: HomeComponent },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'services', component: ServicesComponent },
 	{ path: 'portfolio', component: PortfolioComponent },
-	{ path: 'contact-us', component: ContactComponent },
+	{ path: 'contact', component: ContactComponent },
 ];
