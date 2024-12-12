@@ -1,30 +1,109 @@
 .footer-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
 	background: linear-gradient(135deg, #232526, #414345);
+	padding: 10px 200px 0px 200px;
 	color: #fff;
-	padding: 20px 200px;
 
-	h3 {
-		font-size: 20px;
-		color: #00d084;
-		margin-bottom: 15px;
+	.info-section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		h3 {
+			font-size: 20px;
+			color: #00d084;
+			margin-bottom: 15px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin: 10px 0;
+				font-size: 14px;
+				display: flex;
+				align-items: center;
+				gap: 4px;
+
+				a {
+					color: #00d084;
+					text-decoration: none;
+					transition: color 0.3s ease;
+
+					&:hover {
+						color: #df7a5f;
+					}
+				}
+			}
+		}
+
+		.contact-section {
+			flex: 1;
+			min-width: 250px;
+
+			ul {
+				li {
+					font-size: 16px;
+					font-weight: 500;
+				}
+			}
+		}
+
+		.social-media-section {
+			flex: 1;
+			min-width: 250px;
+			text-align: center;
+
+			ul {
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+
+				li {
+					svg {
+						fill: #ccc;
+						width: 30px;
+						height: 30px;
+						transition: fill 0.3s ease, transform 0.3s ease;
+
+						&:hover {
+							fill: #00d084;
+							transform: scale(1.5);
+						}
+					}
+				}
+			}
+		}
+
+		.logo-section {
+			flex: 1;
+			min-width: 200px;
+			text-align: center;
+
+			img {
+				width: 200px;
+				height: auto;
+				border-radius: 50px 10px 50px 10px;
+
+				border: 2px solid #00d084;
+				padding: 4px;
+				transition: transform 0.3s ease, border-color 0.3s ease;
+
+				&:hover {
+					transform: rotate(360deg);
+					border-color: #df7a5f;
+				}
+			}
+		}
 	}
 
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-
-		li {
-			margin: 10px 0;
-			font-size: 14px;
-			display: flex;
-			align-items: center;
-			gap: 4px;
-
+	.copyright-section {
+		border-top: 2px solid whitesmoke;
+		p {
+			margin: 0;
+			padding: 12px 0px;
 			a {
 				color: #00d084;
 				text-decoration: none;
@@ -33,65 +112,6 @@
 				&:hover {
 					color: #df7a5f;
 				}
-			}
-		}
-	}
-
-	.contact-section {
-		flex: 1;
-		min-width: 250px;
-
-		ul {
-			li {
-				font-size: 16px;
-				font-weight: 500;
-			}
-		}
-	}
-
-	.social-media-section {
-		flex: 1;
-		min-width: 250px;
-		text-align: center;
-
-		ul {
-			display: flex;
-			justify-content: center;
-			gap: 20px;
-
-			li {
-				svg {
-					fill: #ccc;
-					width: 30px;
-					height: 30px;
-					transition: fill 0.3s ease, transform 0.3s ease;
-
-					&:hover {
-						fill: #00d084;
-						transform: scale(1.5);
-					}
-				}
-			}
-		}
-	}
-
-	.logo-section {
-		flex: 1;
-		min-width: 200px;
-		text-align: center;
-
-		img {
-			width: 200px;
-			height: auto;
-			border-radius: 50px 10px 50px 10px;
-
-			border: 2px solid #00d084;
-			padding: 4px;
-			transition: transform 0.3s ease, border-color 0.3s ease;
-
-			&:hover {
-				transform: rotate(360deg);
-				border-color: #df7a5f;
 			}
 		}
 	}

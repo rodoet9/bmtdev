@@ -1,11 +1,15 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	// justify-content: space-between;
 	background: linear-gradient(135deg, #1e5a46, #74a96b, #c1d1b2);
 	background-size: 200% 200%;
 	animation: gradientShift 6s ease infinite;
-	min-height: 100%;
+	// min-height: 100%;
+
+	&-content {
+		height: 100vh;
+	}
 }
 
 @keyframes gradientShift {
