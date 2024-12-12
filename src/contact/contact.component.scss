@@ -1,0 +1,129 @@
+.contact-container {
+	display: flex;
+	justify-content: center;
+	padding: 0 100px;
+}
+
+.contact-social-media {
+	width: 100%;
+	margin-left: 16px;
+	display: flex;
+	flex-direction: column;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 16px;
+	padding: 30px 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease-in-out;
+
+	h1 {
+		font-size: 32px;
+		color: #333;
+		margin-bottom: 16px;
+		text-align: center;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			font-size: 16px;
+			color: #555;
+			line-height: 1.5;
+			border-bottom: 1px solid #555;
+			padding: 16px 8px;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			a {
+				color: #28a745;
+				text-decoration: none;
+				font-weight: bold;
+				transition: color 0.3s ease;
+
+				&:hover {
+					color: #218838;
+				}
+			}
+		}
+	}
+}
+
+.contact-form-container {
+	padding: 30px 20px;
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	width: 80%;
+	// margin: 0 auto;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 16px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+	h1 {
+		font-size: 32px;
+		color: #333;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		width: 100%;
+
+		.form-group {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+
+			label {
+				font-size: 16px;
+				color: #555;
+			}
+
+			input,
+			textarea {
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				padding: 10px;
+				font-size: 14px;
+				color: #333;
+
+				&::placeholder {
+					color: #aaa;
+				}
+
+				&:focus {
+					outline: none;
+					border-color: #28a745;
+					box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+				}
+			}
+
+			textarea {
+				resize: none;
+			}
+		}
+
+		.submit-btn {
+			background: #28a745;
+			color: white;
+			padding: 8px 12px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			align-self: flex-start;
+
+			&:hover {
+				background: #218838;
+			}
+		}
+	}
+}
