@@ -3,11 +3,16 @@
 		<div class="logo-container">
 			<img src="logo.png" alt="logo bmt.dev" class="logo" />
 		</div>
-		<ul class="nav-links">
+		<ul class="nav-links" [ngClass]="{ active: menuOpen }">
 			<li><a routerLink="/home" aria-label="Homepage">Home</a></li>
 			<li><a routerLink="/services" title="Learn more about our services">Services</a></li>
 			<li><a routerLink="/portfolio" aria-label="View our portfolio">Portfolio</a></li>
 			<li><a routerLink="/contact" aria-label="Contact us for inquiries">Get in touch</a></li>
 		</ul>
+		<div class="hamburger-menu" (click)="toggleMenu()">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
 	</nav>
 </header>

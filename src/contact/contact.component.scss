@@ -57,9 +57,7 @@
 	padding: 30px 20px;
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
 	width: 80%;
-	// margin: 0 auto;
 	background: rgba(255, 255, 255, 0.9);
 	border-radius: 16px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -124,6 +122,31 @@
 
 			&:hover {
 				background: #218838;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		padding: 12px;
+
+		.contact-form-container,
+		.contact-social-media {
+			width: 80%;
+			margin-left: 0;
+			margin-bottom: 12px;
+
+			h1 {
+				font-size: 28px;
+			}
+
+			ul {
+				li {
+					font-size: 14px;
+				}
 			}
 		}
 	}

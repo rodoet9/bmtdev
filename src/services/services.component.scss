@@ -20,7 +20,7 @@ $heading-color: #333;
 
 		p {
 			font-size: 16px;
-			margin-bottom: 40px;
+			margin-bottom: 32px;
 			color: $text-color;
 		}
 	}
@@ -28,11 +28,6 @@ $heading-color: #333;
 	.services-content {
 		display: flex;
 		gap: 8px;
-
-		@media screen and (max-width: 768px) {
-			flex-direction: column;
-			gap: 16px;
-		}
 	}
 
 	.services-content-card {
@@ -109,10 +104,30 @@ $heading-color: #333;
 			}
 		}
 	}
+}
 
-	@media screen and (max-width: 768px) {
-		.services-content-card {
-			width: 100%;
+@media (max-width: 375px) {
+	.services-container {
+		padding: 12px 24px;
+		margin: 0;
+
+		.services-title {
+			h1 {
+				font-size: 28px;
+			}
+
+			p {
+				margin-bottom: 16px;
+			}
+		}
+
+		.services-content {
+			display: flex;
+			flex-direction: column;
+
+			&-card {
+				width: 88%;
+			}
 		}
 	}
 }

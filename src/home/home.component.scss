@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
-
 .hero {
 	height: 80%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #333;
-	text-align: center;
 }
 
 .hero-content {
@@ -15,7 +12,6 @@
 	justify-content: space-between;
 	max-width: 1200px;
 	width: 100%;
-	padding: 20px;
 }
 
 .text-container {
@@ -25,30 +21,67 @@
 }
 
 .hero h1 {
-	font-size: 44px;
+	font-size: 80px;
+	line-height: 64px;
 	margin-bottom: 20px;
 	color: #2a3d29;
-	font-family: 'Gravitas One', serif;
+	font-family: 'Abril Fatface', serif;
 	font-weight: 400;
 	font-style: normal;
 }
 
+.hero h1 span {
+	background: linear-gradient(135deg, #ffffff, #f9f9f9, #e6e6e6);
+	background-size: 200% 200%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: gradientShift 6s ease infinite, fadeIn 2s ease forwards;
+	animation-delay: 0s, 1s;
+	opacity: 0;
+}
+
+@keyframes gradientShift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .hero p {
-	font-size: 18px;
+	font-size: 20px;
 	margin-bottom: 30px;
-	color: #435d3a;
+	// color: #435d3a;
+	color: #e6e6e6;
+	font-family: 'Poppins', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
 }
 
 .cta-button {
 	padding: 12px 25px;
-	font-size: 20px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
 	letter-spacing: 2px;
 	font-weight: 300;
 	text-decoration: none;
 	background-color: #99bc85;
 	color: #333;
 	border-radius: 40px 4px 40px 4px;
-	border: none;
 	transition: background-color 0.3s ease;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -66,5 +99,31 @@
 		height: auto;
 		border-radius: 100px 10px 100px 10px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+}
+
+// Responsive design
+@media (max-width: 375px) {
+	.hero {
+		padding: 12px 24px;
+
+		&-content {
+			.text-container {
+				margin: 0;
+
+				h1 {
+					font-size: 64px;
+				}
+
+				p {
+					font-size: 14px;
+				}
+
+				a {
+					padding: 8px 16px;
+					font-size: 12px;
+				}
+			}
+		}
 	}
 }

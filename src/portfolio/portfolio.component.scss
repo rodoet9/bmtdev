@@ -21,6 +21,7 @@
 		padding: 16px 8px;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		margin-bottom: 8px;
 
 		h2 {
 			color: #333;
@@ -31,6 +32,7 @@
 		p.project-description {
 			color: #555;
 			font-size: 14px;
+			margin: 4px 0;
 		}
 
 		img {
@@ -58,6 +60,15 @@
 
 		&:hover {
 			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.portfolio-container {
+		.projects-list {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 		}
 	}
 }
