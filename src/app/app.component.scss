@@ -1,10 +1,23 @@
 .container-content {
 	background: linear-gradient(135deg, #1e5a46, #74a96b, #c1d1b2);
 	background-size: 200% 200%;
-	animation: gradientShift 6s ease infinite;
+	position: relative;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	min-height: 100vh;
+	animation: gradientShift 6s ease infinite;
+	overflow: hidden;
+}
+
+.container-content::before {
+	content: 'bmtDEV';
+	position: absolute;
+	font-family: 'Abril Fatface', serif;
+	font-size: 180px;
+	color: rgba(255, 255, 255, 0.04);
+	animation: watermarkFullScreen 15s ease-in-out infinite;
+	pointer-events: none;
+	z-index: 0;
 }
 
 @keyframes gradientShift {
@@ -17,4 +30,37 @@
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@keyframes watermarkFullScreen {
+	0% {
+		top: -20%;
+		left: -20%;
+		transform: scale(1) rotate(0deg);
+	}
+	25% {
+		top: 50%;
+		left: -10%;
+		transform: scale(1.2) rotate(15deg);
+	}
+	50% {
+		top: 110%;
+		left: 50%;
+		transform: scale(1) rotate(0deg);
+	}
+	75% {
+		top: 50%;
+		left: 110%;
+		transform: scale(1.2) rotate(-15deg);
+	}
+	100% {
+		top: -20%;
+		left: -20%;
+		transform: scale(1) rotate(0deg);
+	}
+}
+
+.container-content > * {
+	position: relative;
+	z-index: 1;
 }

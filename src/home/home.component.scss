@@ -15,12 +15,11 @@
 
 .text-container {
 	max-width: 700px;
-	margin-right: 30px;
 	letter-spacing: 2px;
 }
 
 .hero h1 {
-	font-size: 80px;
+	// font-size: 80px;
 	line-height: 64px;
 	margin-bottom: 20px;
 	color: #2a3d29;
@@ -89,18 +88,6 @@
 	background-color: #89a773;
 }
 
-.image-container {
-	flex: 1;
-	text-align: center;
-
-	img {
-		max-width: 100%;
-		height: auto;
-		border-radius: 100px 10px 100px 10px;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	}
-}
-
 // Responsive design
 @media (max-width: 425px) {
 	.hero {
@@ -111,7 +98,8 @@
 				margin: 0;
 
 				h1 {
-					font-size: 64px;
+					font-size: 56px;
+					line-height: 52px;
 				}
 
 				p {
@@ -127,7 +115,7 @@
 	}
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
 	.hero {
 		padding: 12px 24px;
 
@@ -149,10 +137,6 @@
 					font-weight: 300;
 				}
 			}
-		}
-
-		.image-container {
-			display: none;
 		}
 	}
 }
@@ -180,10 +164,6 @@
 				}
 			}
 		}
-
-		.image-container {
-			display: none;
-		}
 	}
 }
 @media (min-width: 1025px) {
@@ -192,10 +172,9 @@
 
 		&-content {
 			.text-container {
-				// margin: 0;
-
 				h1 {
-					font-size: 64px;
+					font-size: 94px;
+					line-height: 72px;
 				}
 
 				p {
